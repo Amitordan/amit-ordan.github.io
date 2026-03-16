@@ -78,6 +78,11 @@
 
   .nav-logo span { color: var(--gold); }
 
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
   .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -246,6 +251,56 @@
     background: var(--gold);
     color: var(--cream);
   }
+
+  .btn-download {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    flex-shrink: 0;
+  }
+  .btn-download:hover {
+    background: var(--gold);
+    color: var(--cream) !important;
+  }
+  .btn-download svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  .nav-cv {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold) !important;
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    min-width: 3rem;
+  }
+  .nav-cv:hover {
+    background: var(--gold);
+    color: var(--cream) !important;
+  }
+  .nav-cv svg { width: 0.9rem; height: 0.9rem; flex-shrink: 0; }
 
   .hero-right {
     position: relative;
@@ -792,6 +847,7 @@
 
   @media (max-width: 600px) {
     .nav-links { display: none; }
+    .nav-right { gap: 0; }
     h1 { font-size: 2.4rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .hero-stats { gap: 1.2rem; }
@@ -808,13 +864,16 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">Amit <span>Ordan</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#timeline">Journey</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-right">
+      <ul class="nav-links">
+          <li><a href="#timeline">Journey</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="cv.pdf" download="Amit_Ordan_CV" style="background: var(--gold); color: var(--ink); padding: 8px 16px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-left: 15px; font-size: 0.9rem; display: inline-block;">
+         Download CV ↓
+      </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -834,6 +893,10 @@
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary"><span>Get In Touch</span></a>
       <a href="#timeline" class="btn-outline">My Journey</a>
+      <a href="Amit_Ordan_CV.pdf" class="btn-download" download="Amit_Ordan_CV.pdf" title="Download my CV">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
     </div>
   </div>
 
