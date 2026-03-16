@@ -860,10 +860,10 @@
 
   <div class="timeline">
 
-    <!-- 2024–Present: AI Studies -->
+    <!-- 2026–Present: AI Studies -->
     <div class="timeline-item">
       <div class="timeline-date">
-        <div class="timeline-year">2024</div>
+        <div class="timeline-year">2026</div>
         <div class="timeline-period">Present</div>
       </div>
       <div class="timeline-content">
@@ -1108,4 +1108,11 @@
         const bar = entry.target.querySelector('.skill-bar-fill');
         if (bar) {
           const level = entry.target.dataset.level;
-         
+          bar.style.width = (level || 0) + '%';
+        }
+      }
+    });
+  });
+  document.querySelectorAll('.skill-card, .contact-info-item, .contact-form-area').forEach(el => observer.observe(el));
+</script>
+
